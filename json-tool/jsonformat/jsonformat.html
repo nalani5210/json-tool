@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <title>JSON </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../jsonformat/jsonformat-assets/css/jsonformat.min.css">
+  <link rel="stylesheet" href="../jsonformat/jsonformat-assets/css/format.css">
+  <link rel="stylesheet" href="../jsonformat/jsonformat-assets/css/format.min.css">
+  <style>
+    h1 {
+      margin-top: 10px !important;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <!--jsonFormat -->
+    <div id="jsonFormat">
+      <div style="height: 50px; background: #3f7fb8"></div>
+      <div class="HeadersRow">
+        <textarea id="rawJson" placeholder="Input Json String Please ..."></textarea>
+      </div>
+      <div id="ControlsRow">
+        <input type="Button" value="JSON FORMAT" onclick="Process()" id="format" class="layui-btn"/>
+        <span id="TabSizeHolder">
+          indent
+          <select id="TabSize" onchange="TabSizeChanged()" class="select_theme">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </span>
+        &emsp;
+        <label for="QuoteKeys">
+          <input type="checkbox" id="QuoteKeys" onclick="QuoteKeysClicked()" checked />
+          quotation marks
+        </label>
+      </div>
+      <div id="canvas" class="canvas"></div>
+    </div>
+  </div>
+  <div style="height: 50px; background: #3f7fb8"></div>
+
+  <script src="../jsonformat/jsonformat-assets/js/jquery3.5.1.js"></script>
+  <script src="../jsonformat/jsonformat-assets/js/json.js"></script>
+</body>
+</html>
